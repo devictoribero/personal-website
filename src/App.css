@@ -17,6 +17,54 @@ html, body {
   --border-colored-chips: 2px solid pink;
   --bg-socialBar: rgba(255,255,255,0.2);
 
+  --socialBar-height-mobile: 50px;
+  --socialBar-height: 75px;
+  --hero-typed-text-position: 10px;
+  --distance-line-separation-with-author: 20px;
+  --distance-line-separation-with-author-tablet: 180px;
+  --distance-line-separation-with-author-desktop: 300px;
+}
+
+/************** Social Bar ***************/
+.socialBar {
+  background: var(--bg-socialBar);
+  height: var(--socialBar-height-mobile);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.socialBar-element {
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: auto 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+  letter-spacing: 0.3px;
+}
+.socialBar-element:not(:last-child) {
+  margin: auto 0 auto 10px;
+}
+.socialBar-element:hover {
+  cursor: pointer;
+}
+.socialBar-element--twitter {
+  background: var(--color-twitter)
+}
+.socialBar-element--github {
+  background: var(--color-github)
+}
+.socialBar-element-icon {
+  margin-right: 10px;
 }
 
 /****************** Hero *******************/
@@ -25,58 +73,19 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
+  min-height: 100vh;
 }
 .hero__positioner {
   padding: 100px 0;
   width: 100%;
 }
-
-/************** Social Bar ***************/
-.hero__socialBar {
-  background: var(--bg-socialBar);
-  height: 50px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.hero__socialBar-element {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: auto 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: monospace;
-}
-.hero__socialBar-element:not(:last-child) {
-  margin: auto 0 auto 10px;
-}
-.hero__socialBar-element:hover {
-  cursor: pointer;
-}
-.hero__socialBar-element--twitter {
-  background: var(--color-twitter)
-}
-.hero__socialBar-element--github {
-  background: var(--color-github)
-}
-.hero__socialBar-element-icon {
-  margin-right: 10px;
-}
-
 .hero__author {
   font-family: var(--font-family-handwritten);
   color: white;
   position: relative;
   font-size: 22px;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 .hero__author::before,
 .hero__author::after {
@@ -89,81 +98,27 @@ html, body {
 }
 .hero__author::before {
   position: absolute;
-  left: 10%;
+  left: var(--distance-line-separation-with-author);
 }
 .hero__author::after {
-  right: 20px;
+  right: var(--distance-line-separation-with-author);
   border-radius: 500px;
 }
-.hero__string1 {
+.hero__slogan {
   font-family: var(--font-family-sans-serif);
   color: white;
   font-size: 36px;
   text-align: center;
   margin-top: 20px;
 }
-.hero__string {
+.hero__typed-text {
   color: white;
-  text-align: center;
-}
-.hero__string.hero__string--1 {
-  margin-top: 20px;
-  font-size: 36px;
-  font-family: var(--font-family-sans-serif);
-}
-.hero__string.hero__string--2 {
-  font-size: 130px;
-  font-family: var(--font-family-sans-serif-2);
-  background: white;
-  color: var(--color-secondary);
-  margin: 40px 0;
-  padding: 20px 0;
-}
-.hero__string.hero__string--3 {
-  position: relative;
-  font-size: 35px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  margin-top: 10px;
-}
-.hero__string.hero__string--3 .hero_aqua_mark {
+  font-size: 14px;
+  font-family: monospace;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: -24px;
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-.hero__interest-list {
-  padding: 0 5px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.chip.chip--colored,
-.chip.chip--colored .chip__ball {
-  border: var(--border-colored-chips);
-}
-.chip {
-  padding: 7px 15px 7px 35px;
-  font-family: var(--font-family-handwritten);
-  margin: 5px 2%;
-  background: white;
-  color: var(--color-main);
-  border-radius: 500px;
-  font-size: 13px;
-  position: relative;
-  letter-spacing: 0.3px;
-}
-.chip__ball {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(60deg, pink, var(--color-secondary), var(--color-alternative));
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: var(--is-rounded);
+  left: var(--hero-typed-text-position);
+  bottom: var(--hero-typed-text-position);
+  right: var(--hero-typed-text-position);
 }
 
 
@@ -171,6 +126,16 @@ html, body {
 /****************************** MEDIAQUERIES **********************************/
 /******************************************************************************/
 @media (min-width: 768px) {
+  /************** Social Bar ***************/
+  .socialBar {
+    justify-content: flex-end;
+    height: var(--socialBar-height);
+  }
+  .socialBar-element {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  /****************** Hero *******************/
   .hero {
     min-height: 100vh;
     padding: 0;
@@ -178,44 +143,37 @@ html, body {
   .hero__positioner {
     padding: 0;
   }
+
   .hero__author::before,
   .hero__author::after {
     width: 75px;
   }
   .hero__author::before {
-    left: 180px;
+    left: var(--distance-line-separation-with-author-tablet);
   }
   .hero__author::after {
-    right: 180px;
+    right: var(--distance-line-separation-with-author-tablet);
   }
   .hero__author {
-    font-size: 35px;
+    font-size: 40px;
   }
-  .hero__string.hero__string--1 {
-    font-size: 50px;
+  .hero__slogan {
+    font-size: 75px;
   }
-  .hero__string.hero__string--2 {
-    font-size: 150px;
-  }
-  .hero__string.hero__string--3 {
-    font-size: 50px;
-  }
-  .hero__interest-list {
-    margin-top: 40px;
-  }
-  .chip.chip--colored {
-    font-size: 20px;
-    padding: 10px 25px 10px 55px;
-    margin: 10px 2%;
-  }
-  .chip__ball {
-    width: 37px;
-    height: 37px;
+  .hero__typed-text {
+    font-size: 24px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  /****************** Hero *******************/
   .hero__positioner {
     padding: 100px 0;
+  }
+  .hero__author::before {
+    left: var(--distance-line-separation-with-author-desktop);
+  }
+  .hero__author::after {
+    right: var(--distance-line-separation-with-author-desktop);
   }
 }

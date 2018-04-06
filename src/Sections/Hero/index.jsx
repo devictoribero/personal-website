@@ -1,14 +1,31 @@
 import React from 'react';
 
-import Header from './components/Header';
-import SocialBar from './components/SocialBar';
+import Typed from 'react-typed';
 
-const Hero = props => {
+const Hero = ({social, interests}) => {
   return(
     <section className="hero">
       <div className="hero__positioner">
-        <SocialBar />
-        <Header />
+        <h1 className="hero__author">Victor Ribero</h1>
+        <p className="hero__slogan">I am a Frontend developer</p>
+
+        <Typed
+          className={'hero__typed-text'}
+          strings={[
+            '... who likes to learn',
+            '... who likes to share knowledge',
+            '... who studies about Clean architecture',
+            '... who knows Object-Oriented programming',
+            '... who codes with S.O.L.I.D principles',
+            '... who wants to practise TDD',
+            '... who wants to learn DDD',
+            '... who will be a scrum master',
+            '... who reads a lot about tech stuff',
+            ]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop
+        />
       </div>
     </section>
   );
