@@ -2,28 +2,22 @@ import React, { Component } from 'react';
 import './reset.css';
 import './App.css';
 
+import {author,slogan, socials_media, typed_text} from './Initialize/index';
 import Hero from './Sections/Hero';
 import SocialBar from "./components/SocialBar";
+import AboutMe from "./Sections/AboutMe";
 
 class App extends Component {
   render() {
-    const socials_media = [
-      {
-        name: 'twitter',
-        url: 'https://twitter.com/js_tureey',
-        profile_name: 'js_tureey',
-      },
-      {
-        name: 'github',
-        url: 'https://github.com/tureey',
-        profile_name: 'tureey',
-      },
-    ];
-
     return (
       <React.Fragment>
         <SocialBar socials_media={socials_media} />
-        <Hero />
+        <Hero
+          author={author}
+          slogan={slogan}
+          typed_text={typed_text}
+        />
+        <AboutMe />
       </React.Fragment>
     );
   }

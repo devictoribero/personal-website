@@ -3,6 +3,10 @@ html, body {
   height: 100%;
 }
 
+strong {
+  font-style: italic;
+}
+
 /* Variables */
 :root {
   --font-family-handwritten: 'Amita', cursive;
@@ -23,6 +27,11 @@ html, body {
   --distance-line-separation-with-author: 20px;
   --distance-line-separation-with-author-tablet: 180px;
   --distance-line-separation-with-author-desktop: 300px;
+}
+
+/*************** Section *****************/
+.section {
+  padding: 30px;
 }
 
 /************** Social Bar ***************/
@@ -103,7 +112,7 @@ html, body {
 .hero__author::after {
   right: var(--distance-line-separation-with-author);
   border-radius: 500px;
-}
+}.hero
 .hero__slogan {
   font-family: var(--font-family-sans-serif);
   color: white;
@@ -120,12 +129,36 @@ html, body {
   bottom: var(--hero-typed-text-position);
   right: var(--hero-typed-text-position);
 }
+/*************** About me *****************/
+.aboutMe__article {}
+.aboutMe__article-header {
+  margin-bottom: 10px;
+}
+.aboutMe__article-title {
+  font-size: 32px;
+  font-family: var(--font-family-sans-serif-2);
+  letter-spacing: 1px;
+  line-height: normal;
+}
+.aboutMe__article-life {
+  font-size: 18px;
+  font-family: Open-Sans, Sans-serif;
+  line-height: 24px;
+  text-align: justify;
+}
+.aboutMe__article:not(:last-child) {
+  margin-bottom: 40px;
+}
 
 
 /******************************************************************************/
 /****************************** MEDIAQUERIES **********************************/
 /******************************************************************************/
 @media (min-width: 768px) {
+  /*************** Section *****************/
+  .section {
+    padding: 50px;
+  }
   /************** Social Bar ***************/
   .socialBar {
     justify-content: flex-end;
@@ -175,5 +208,13 @@ html, body {
   }
   .hero__author::after {
     right: var(--distance-line-separation-with-author-desktop);
+  }
+  /*************** About me *****************/
+  .aboutMe {
+    display: flex;
+  }
+  .aboutMe__article {
+    margin: 0 30px;
+    margin-bottom: 0 !important;
   }
 }
