@@ -19,6 +19,11 @@ strong {
   --color-github: #24292e;
   --is-rounded: 500px;
   --border-colored-chips: 2px solid pink;
+  --menu-bg-color: white;
+  --menu-cross-color: var(--color-main);
+  --menu-burger-position: 30px;
+
+
   --bg-socialBar: rgba(255,255,255,0.2);
 
   --socialBar-height-mobile: 50px;
@@ -32,6 +37,50 @@ strong {
 /*************** Section *****************/
 .section {
   padding: 30px;
+}
+/*************** Menu *****************/
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 25px;
+  right: var(--menu-burger-position);
+  top: var(--menu-burger-position);
+}
+.bm-menu {
+  background: var(--menu-bg-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bm-morph-shape {
+  fill: var(--menu-bg-color);
+}
+.bm-burger-bars {
+  border-radius: 500px;
+  background: white;
+}
+.bm-cross {
+  background: var(--menu-cross-color);
+  width: 4px !important;
+  height: 20px !important;
+  border-radius: 500px;
+}
+.bm-item-list {
+  padding: 50px 25px 100px 25px;
+  height: initial !important;
+  width: 100%;
+}
+.menu-item {
+  display: block;
+  padding: 20px 0;
+  width: 100%;
+  font-family: var(--font-family-sans-serif-2);
+  font-size: 28px;
+  letter-spacing: 0.35px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-main);
 }
 
 /************** Social Bar ***************/
@@ -85,7 +134,7 @@ strong {
   min-height: 100vh;
 }
 .hero__positioner {
-  padding: 100px 0;
+  padding: 0 0 10% 0;
   width: 100%;
 }
 .hero__author {
@@ -112,7 +161,7 @@ strong {
 .hero__author::after {
   right: var(--distance-line-separation-with-author);
   border-radius: 500px;
-}.hero
+}
 .hero__slogan {
   font-family: var(--font-family-sans-serif);
   color: white;
@@ -145,6 +194,9 @@ strong {
   font-family: Open-Sans, Sans-serif;
   line-height: 24px;
   text-align: justify;
+}
+.aboutMe__article-life:not(:last-child) {
+  margin-bottom: 20px;
 }
 .aboutMe__article:not(:last-child) {
   margin-bottom: 40px;
