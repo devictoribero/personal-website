@@ -6,6 +6,11 @@ const socials_media = [
       url: 'https://twitter.com/js_tureey',
       profile_name: 'js_tureey',
     },
+  {
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/victorribero/',
+    profile_name: 'Victor Ribero',
+  },
     {
       name: 'github',
       url: 'https://github.com/tureey',

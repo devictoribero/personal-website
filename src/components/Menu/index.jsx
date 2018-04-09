@@ -1,30 +1,21 @@
 import React from 'react';
 
-import * as TiIconPack from 'react-icons/lib/ti';
+import { bubble as MenuThirdPart } from 'react-burger-menu';
+import SocialsMedia from "./components/SocialMedia";
+import Links from "./components/Links";
 
-export default class Menu extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isOpen: false,
-    }
-  }
-
-  render() {
-    const class_modifier_menu = this.state.isOpen ? 'menu--isOpen' : '';
-
-    return(
-      <nav className={`menu ${class_modifier_menu}`}>
-        <Trigger />
-      </nav>
-    );
-  }
+const Menu = ({menu_links, socials_media}) => {
+  return (
+    <MenuThirdPart
+      className={'menu'}
+      width={'calc(100% - 12px)'}
+      isOpen={ true }
+      right
+    >
+      <Links links={menu_links} />
+      <SocialsMedia socials_media={socials_media}/>
+    </MenuThirdPart>
+  );
 };
 
-const Trigger = () => (
-  <TiIconPack.TiThMenu
-    size={30}
-    color={'white'}
-    className={"menu__trigger"}
-  />
-);
+export default Menu;

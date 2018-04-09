@@ -2,28 +2,15 @@ import React, { Component } from 'react';
 import './reset.css';
 import './App.css';
 
-import {author,slogan, menu_links, typed_text} from './Initialize/index';
-import { bubble as Menu } from 'react-burger-menu';
+import {author,slogan, menu_links, socials_media, typed_text} from './Initialize/index';
+import Menu from "./components/Menu";
 import Hero from './Sections/Hero';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Menu
-          className={'menu'}
-          width={'calc(100% - 12px)'}
-          isOpen={ false }
-          right
-        >
-          {menu_links.map(link => {
-            return (
-              <a id={link.id} className="menu-item" href={link.path}>
-                {link.display}
-              </a>
-            );
-          })}
-        </Menu>
+        <Menu menu_links={menu_links} socials_media={socials_media}/>
 
         <Hero
           author={author}

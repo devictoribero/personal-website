@@ -16,18 +16,14 @@ strong {
   --color-secondary: #f8598b;
   --color-alternative: #f7bf00;
   --color-twitter: #1da1f2;
+  --color-linkedin: #283e4a;
   --color-github: #24292e;
-  --is-rounded: 500px;
   --border-colored-chips: 2px solid pink;
   --menu-bg-color: white;
+  --is-rounded: 500px;
   --menu-cross-color: var(--color-main);
   --menu-burger-position: 30px;
 
-
-  --bg-socialBar: rgba(255,255,255,0.2);
-
-  --socialBar-height-mobile: 50px;
-  --socialBar-height: 75px;
   --hero-typed-text-position: 10px;
   --distance-line-separation-with-author: 20px;
   --distance-line-separation-with-author-tablet: 180px;
@@ -50,8 +46,6 @@ strong {
   background: var(--menu-bg-color);
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .bm-morph-shape {
   fill: var(--menu-bg-color);
@@ -67,62 +61,68 @@ strong {
   border-radius: 500px;
 }
 .bm-item-list {
-  padding: 50px 25px 100px 25px;
+  padding: 50px 25px;
   height: initial !important;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .menu-item {
   display: block;
-  padding: 20px 0;
+  padding: 10px 20px;
   width: 100%;
   font-family: var(--font-family-sans-serif-2);
-  font-size: 28px;
+  font-size: 40px;
   letter-spacing: 0.35px;
-  text-align: center;
   text-decoration: none;
   color: var(--color-main);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center
 }
-
-/************** Social Bar ***************/
-.socialBar {
-  background: var(--bg-socialBar);
-  height: var(--socialBar-height-mobile);
+.menu-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.menu-item--socials {
+  padding: 0;
+  margin-top: 50px;
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.menu-item--socials > li {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
 }
-.socialBar-element {
-  color: white;
+.menu-separator {
+  width: 100%;
+  height: 1px;
+  background: #e0e1e2;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.menu-item-social {
+  display: flex;
   text-decoration: none;
-  padding: 5px 20px;
-  border-radius: 5px;
-  margin: auto 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: monospace;
-  letter-spacing: 0.3px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
 }
-.socialBar-element:not(:last-child) {
-  margin: auto 0 auto 10px;
-}
-.socialBar-element:hover {
-  cursor: pointer;
-}
-.socialBar-element--twitter {
-  background: var(--color-twitter)
-}
-.socialBar-element--github {
-  background: var(--color-github)
-}
-.socialBar-element-icon {
+.menu-item-social > svg {
   margin-right: 10px;
+}
+.menu-item-social:not(:last-child) {
+  margin-bottom: 20px;
+}
+.menu-item-social--twitter {
+  background: var(--color-twitter);
+  color: white;
+}
+.menu-item-social--linkedin {
+  background: var(--color-linkedin);
+  color: white;
+}
+.menu-item-social--github {
+  background: var(--color-github);
+  color: white;
 }
 
 /****************** Hero *******************/
@@ -211,14 +211,27 @@ strong {
   .section {
     padding: 50px;
   }
-  /************** Social Bar ***************/
-  .socialBar {
-    justify-content: flex-end;
-    height: var(--socialBar-height);
+  /*************** Menu *****************/
+  .menu-item {
+    font-size: 70px;
+    padding: 20px;
   }
-  .socialBar-element {
-    font-size: 18px;
-    padding: 10px 20px;
+  .menu-item:hover:not(.menu-item--socials) {
+    padding-left: 50px;
+    font-style: italic;
+  }
+  .menu-item:hover:not(.menu-item--socials)::before {
+    content: '>';
+    margin-right: 25px;
+  }
+  .menu-item--socials {
+    margin-top: 50px;
+  }
+  .menu-item--socials {
+    display: flex;
+  }
+  .menu-item-socials {
+    margin: 0;
   }
   /****************** Hero *******************/
   .hero {
@@ -251,6 +264,24 @@ strong {
 }
 
 @media (min-width: 1024px) {
+  /**************** menu *********************/
+  .bm-item-list {
+    padding: 25px;
+  }
+  .menu-item--socials {
+    margin-top: 30px;
+    flex-wrap: nowrap;
+    font-size: 50px;
+  }
+  .menu-item--socials > li:first-child {
+    margin-left: 0 !important;
+  }
+  .menu-item--socials > li {
+    margin: 0 10px;
+  }
+  .menu-item--socials > li:last-child {
+    margin-right: 0 !important;
+  }
   /****************** Hero *******************/
   .hero__positioner {
     padding: 100px 0;
