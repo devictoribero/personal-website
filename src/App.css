@@ -24,7 +24,7 @@ strong {
   --menu-cross-color: var(--color-main);
   --menu-burger-position: 30px;
 
-  --hero-typed-text-position: 10px;
+  --home-typed-text-position: 10px;
   --distance-line-separation-with-author: 20px;
   --distance-line-separation-with-author-tablet: 180px;
   --distance-line-separation-with-author-desktop: 300px;
@@ -125,19 +125,19 @@ strong {
   color: white;
 }
 
-/****************** Hero *******************/
-.hero {
+/****************** Home *******************/
+.home {
   background: linear-gradient(to bottom right, var(--color-main), var(--color-secondary), var(--color-alternative));
   position: relative;
   display: flex;
   align-items: center;
   min-height: 100vh;
 }
-.hero__positioner {
+.home__positioner {
   padding: 0 0 10% 0;
   width: 100%;
 }
-.hero__author {
+.home__author {
   font-family: var(--font-family-handwritten);
   color: white;
   position: relative;
@@ -145,8 +145,8 @@ strong {
   text-align: center;
   letter-spacing: 0.2px;
 }
-.hero__author::before,
-.hero__author::after {
+.home__author::before,
+.home__author::after {
   position: absolute;
   content: '';
   height: 1px;
@@ -154,51 +154,51 @@ strong {
   width: 50px;
   top: 50%;
 }
-.hero__author::before {
+.home__author::before {
   position: absolute;
   left: var(--distance-line-separation-with-author);
 }
-.hero__author::after {
+.home__author::after {
   right: var(--distance-line-separation-with-author);
   border-radius: 500px;
 }
-.hero__slogan {
+.home__slogan {
   font-family: var(--font-family-sans-serif);
   color: white;
   font-size: 36px;
   text-align: center;
   margin-top: 20px;
 }
-.hero__typed-text {
+.home__typed-text {
   color: white;
   font-size: 14px;
   font-family: monospace;
   position: absolute;
-  left: var(--hero-typed-text-position);
-  bottom: var(--hero-typed-text-position);
-  right: var(--hero-typed-text-position);
+  left: var(--home-typed-text-position);
+  bottom: var(--home-typed-text-position);
+  right: var(--home-typed-text-position);
 }
 /*************** About me *****************/
-.aboutMe__article {}
-.aboutMe__article-header {
+.about-me__article {}
+.about-me__article-header {
   margin-bottom: 10px;
 }
-.aboutMe__article-title {
+.about-me__article-title {
   font-size: 32px;
   font-family: var(--font-family-sans-serif-2);
   letter-spacing: 1px;
   line-height: normal;
 }
-.aboutMe__article-life {
+.about-me__article-life {
   font-size: 18px;
   font-family: Open-Sans, Sans-serif;
   line-height: 24px;
   text-align: justify;
 }
-.aboutMe__article-life:not(:last-child) {
+.about-me__article-life:not(:last-child) {
   margin-bottom: 20px;
 }
-.aboutMe__article:not(:last-child) {
+.about-me__article:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -233,32 +233,32 @@ strong {
   .menu-item-socials {
     margin: 0;
   }
-  /****************** Hero *******************/
-  .hero {
+  /****************** Home *******************/
+  .home {
     min-height: 100vh;
     padding: 0;
   }
-  .hero__positioner {
+  .home__positioner {
     padding: 0;
   }
 
-  .hero__author::before,
-  .hero__author::after {
+  .home__author::before,
+  .home__author::after {
     width: 75px;
   }
-  .hero__author::before {
+  .home__author::before {
     left: var(--distance-line-separation-with-author-tablet);
   }
-  .hero__author::after {
+  .home__author::after {
     right: var(--distance-line-separation-with-author-tablet);
   }
-  .hero__author {
+  .home__author {
     font-size: 40px;
   }
-  .hero__slogan {
+  .home__slogan {
     font-size: 75px;
   }
-  .hero__typed-text {
+  .home__typed-text {
     font-size: 24px;
   }
 }
@@ -282,21 +282,21 @@ strong {
   .menu-item--socials > li:last-child {
     margin-right: 0 !important;
   }
-  /****************** Hero *******************/
-  .hero__positioner {
+  /****************** Home *******************/
+  .home__positioner {
     padding: 100px 0;
   }
-  .hero__author::before {
+  .home__author::before {
     left: var(--distance-line-separation-with-author-desktop);
   }
-  .hero__author::after {
+  .home__author::after {
     right: var(--distance-line-separation-with-author-desktop);
   }
   /*************** About me *****************/
-  .aboutMe {
+  .about-me {
     display: flex;
   }
-  .aboutMe__article {
+  .about-me__article {
     margin: 0 30px;
     margin-bottom: 0 !important;
   }

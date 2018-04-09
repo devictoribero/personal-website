@@ -1,18 +1,18 @@
 import React from 'react';
 
 import { bubble as MenuThirdPart } from 'react-burger-menu';
-import SocialsMedia from "./components/SocialMedia";
-import Links from "./components/Links";
+import Links from "./Components/Links";
+import SocialsMedia from "./Components/SocialMedia";
 
-const Menu = ({menu_links, socials_media}) => {
+const Menu = ({links, socials_media}) => {
   return (
     <MenuThirdPart
       className={'menu'}
       width={'calc(100% - 12px)'}
-      isOpen={ true }
+      isOpen={ false }
       right
     >
-      <Links links={menu_links} />
+      <Links links={links} />
       <SocialsMedia socials_media={socials_media}/>
     </MenuThirdPart>
   );

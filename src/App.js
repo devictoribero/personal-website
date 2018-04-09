@@ -1,23 +1,46 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import './reset.css';
 import './App.css';
 
-import {author,slogan, menu_links, socials_media, typed_text} from './Initialize/index';
-import Menu from "./components/Menu";
-import Hero from './Sections/Hero';
+import ApplicationData from './Initialize/index';
+import Home from './Scenes/Home';
+import AboutMe from './Scenes/AboutMe';
+import Menu from "./Components/Menu";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+    };
+  }
+
   render() {
     return (
-      <React.Fragment>
-        <Menu menu_links={menu_links} socials_media={socials_media}/>
+      <BrowserRouter>
+        <React.Fragment >
 
-        <Hero
-          author={author}
-          slogan={slogan}
-          typed_text={typed_text}
-        />
-      </React.Fragment>
+          <Menu
+            links={ApplicationData.links}
+            socials_media={ApplicationData.socials_media}
+          />
+
+          <main role='main'>
+            <Switch>
+              <Route exact path ='/' render={(props) => (
+                <Home {...props} ApplicationData={ApplicationData} />
+              )}/>
+
+              <Route path ='/about' render={(props) => (
+                <AboutMe {...props} ApplicationData={ApplicationData} />
+              )}/>
+
+            </Switch>
+          </main>
+
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
