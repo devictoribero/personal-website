@@ -8,6 +8,7 @@ import ApplicationData from './Initialize/index';
 import Home from './Scenes/Home';
 import AboutMe from './Scenes/AboutMe';
 import Menu from "./Components/Menu";
+import Interests from "./Scenes/Interests";
 
 class App extends Component {
   constructor() {
@@ -26,7 +27,7 @@ class App extends Component {
             socials_media={ApplicationData.socials_media}
           />
 
-          <main role='main'>
+          <main class="main-layout" role='main'>
             <Switch>
               <Route exact path ='/' render={(props) => (
                 <Home {...props} ApplicationData={ApplicationData} />
@@ -34,6 +35,10 @@ class App extends Component {
 
               <Route path ='/about' render={(props) => (
                 <AboutMe {...props} ApplicationData={ApplicationData} />
+              )}/>
+
+              <Route path ='/interests' render={(props) => (
+                <Interests {...props} ApplicationData={ApplicationData} />
               )}/>
 
             </Switch>

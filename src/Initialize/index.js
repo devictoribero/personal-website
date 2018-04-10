@@ -56,29 +56,23 @@ const ApplicationData = {
       name: 'general',
       title: 'How am I?',
       texts: [
-        'I am exactly the same person in my private life than my professional career.',
         'I always do my best. I think there is no point to waste time doing something not being motivated.',
-        'I take care of animals, friends, way to express my self, my code, how I practise sport, what and how I eat..',
+        'I take care of everything; Animals, friends, way to express my self, my code, how I practise sport, what and how I eat..',
       ]
     },
     {
       name: 'personal',
       title: 'Personal',
       texts: [
-        'I am exactly the same person in my private life than my professional career.',
-        'Due to our personality we have to behave in the same way in both places.',
-        'We have a personality that we can\'t change so we have to be the same in our professional career and private life. I try to do things as better as possible doing my best to enjoy the moment.',
-        'I like to take care of everything: animals, friends, way to express my self, my code, how I practise sport, what and how I eat.. And that\'s because if I have to spend time doing something, at least I want to do it properly',
+        'I\'ve always took care of my mind and body.',
+        'I like to have healthy habits: Drink a lot of water, read, practise yoga, study, have funny moment',
       ]
     },
     {
       name: 'professional',
       title: 'Professional',
       texts: [
-        'I am exactly the same person in my private life than my professional career.',
-        'Due to our personality we have to behave in the same way in both places.',
-        'We have a personality that we can\'t change so we have to be the same in our professional career and private life. I try to do things as better as possible doing my best to enjoy the moment.',
-        'I like to take care of everything: animals, friends, way to express my self, my code, how I practise sport, what and how I eat.. And that\'s because if I have to spend time doing something, at least I want to do it properly',
+        'Perfection is my goal. I want to be'
       ]
     },
   ],
