@@ -14,7 +14,7 @@ const Links = ({links}) => {
               className="menu-item"
               role='menuitem'
             >
-              {link.display}
+              <span>{link.display}</span>
             </Link>
           </li>
         );

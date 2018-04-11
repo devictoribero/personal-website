@@ -53,27 +53,20 @@ const ApplicationData = {
   ],
   aboutMe: [
     {
-      name: 'general',
-      title: 'How am I?',
-      texts: [
-        'I always do my best. I think there is no point to waste time doing something not being motivated.',
-        'I take care of everything; Animals, friends, way to express my self, my code, how I practise sport, what and how I eat..',
-      ]
+      type: 'text',
+      value: 'A passionate, proactive, dedicated individual with an entrepreneurial spirit capable to do whatever.',
     },
     {
-      name: 'personal',
-      title: 'Personal',
-      texts: [
-        'I\'ve always took care of my mind and body.',
-        'I like to have healthy habits: Drink a lot of water, read, practise yoga, study, have funny moment',
-      ]
+      type: 'text',
+      value: 'Ethics, goodness, honesty and responsability are the principles I apply to everything. We are responsable of the craft we do.',
     },
     {
-      name: 'professional',
-      title: 'Professional',
-      texts: [
-        'Perfection is my goal. I want to be'
-      ]
+      type: 'text',
+      value: 'I am interested about all kind off software development, marketing, SEO and economics. The quality of the product is non-negotiable.'
+    },
+    {
+      type: 'quote',
+      value: 'My dream is to found a company with ethics that helps the enviroment or underdeveloped countries.',
     },
   ],
 
