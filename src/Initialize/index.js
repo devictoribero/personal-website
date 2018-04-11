@@ -69,6 +69,77 @@ const ApplicationData = {
       value: 'My dream is to found a company with ethics that helps the enviroment or underdeveloped countries.',
     },
   ],
+  books_and_readings: [
+    {
+      classification: 'featured',
+      data: [
+        {
+          type: 'books',
+          data: [
+            {
+              name: 'Clean Code',
+              displayName: 'Clean code',
+              link: 'http://ricardogeek.com/docs/r_clean_code.pdf',
+              author: 'Robert C. Martin',
+            },
+            {
+              name: 'Clean architecture',
+              displayName: 'Clean architecture',
+              link: 'https://www.bookdepository.com/Clean-Architecture-Robert-C-Martin/9780134494166',
+              author: 'Robert C. Martin',
+            },
+            {
+              name: 'The pragmatic programmer',
+              displayName: 'Clean Code',
+              link: 'https://www.nceclusters.no/globalassets/filer/nce/diverse/the-pragmatic-programmer.pdf',
+              author: 'Andrew Hunt',
+            },
+          ]
+        },
+        {
+          type: 'Blogs',
+          data: [
+            {
+              name: 'Martin Fowler',
+              displayName: 'Martin Fowler',
+              link: 'https://martinfowler.com',
+            },
+            {
+              name: 'Carlos Buenosvinos',
+              displayName: 'Carlos Buenosvinos',
+              link: 'https://carlosbuenosvinos.com/',
+            },
+            {
+              name: 'CSS-tricks',
+              displayName: 'CSS-tricks',
+              link: 'https://css-tricks.com/',
+            },
+          ]
+        },
+        {
+          type: 'Readings',
+          data: [
+            {
+              name: 'Code smell',
+              displayName: 'Code smell',
+              link: 'https://martinfowler.com',
+              author: 'Martin Fowler',
+            },
+            {
+              name: 'Code smell 2',
+              displayName: 'Code smell 2',
+              link: 'https://sourcemaking.com/refactoring/smells',
+            },
+            {
+              name: 'Hexagonal architecture',
+              displayName: 'Hexagonal architecture',
+              link: 'http://fideloper.com/hexagonal-architecture',
+            },
+          ]
+        }
+      ]
+    }
+  ]
 
 };
 
