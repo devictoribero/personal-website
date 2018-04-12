@@ -30,7 +30,7 @@ const ApplicationData = {
     },
     {
       id: 'books & readings',
-      path: '/books_and_readings',
+      path: '/books-and-readings',
       display: 'Books & readings',
     },
   ],
