@@ -19,7 +19,7 @@ export default class Intro extends React.Component {
     return(
       <React.Fragment>
         <header className="intro">
-          <h1 className="intro__hello">Hello!<i className="em em-wave"></i></h1>
+          <h1 className="intro__hello">Hello!<i className="em em-wave hand-animated"></i></h1>
 
           <h2 className="intro__tagline">
             I'm
@@ -41,7 +41,7 @@ export default class Intro extends React.Component {
         </header>
 
         <aside className="vrg-switch-wrapper">
-          <i class="vrg-switch-sun em em-sunny"></i>
+          <i className="vrg-switch-sun em em-sunny"></i>
           <Switch
             className={switch_classes.join(' ')}
             checked={this.state.checked}
@@ -49,7 +49,7 @@ export default class Intro extends React.Component {
             offColor={'grey'}
             onColor={'#bae67e'}
           />
-          <i class="vrg-switch-moon em em-last_quarter_moon_with_face"></i>
+          <i className="vrg-switch-moon em em-last_quarter_moon_with_face"></i>
         </aside>
       </React.Fragment>
     );
