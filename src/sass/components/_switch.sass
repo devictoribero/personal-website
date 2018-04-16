@@ -1,0 +1,55 @@
+$switch--selected-bg-color: #bae67e
+$switch-bg-color: grey
+
+$switch-emmojis-size: 12px
+$isFullRounded: 500px
+$ball-size: 20px
+$ball-left-position: 3px
+$switch-width: 45px
+$switch-height: 26px
+$ball-top-position: 3px
+
+/************ Switch Widget ************/
+.switch-wrapper
+  position: absolute
+  top: 20px
+  right: 20px
+  display: flex
+  align-items: center
+  width: 100px
+  justify-content: space-between
+
+.switch-wrapper .switch-sun,
+.switch-wrapper .switch-moon
+  font-size: $switch-emmojis-size
+
+
+/*************** Switch ****************/
+.switch
+  width: $switch-width
+  height: $switch-height
+  box-shadow: none
+  border: none
+  border-radius: $isFullRounded
+  background: $switch-bg-color
+  position: relative
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+
+  span.ball
+    position: absolute
+    top: $ball-top-position
+    left: $ball-left-position
+    width: $ball-size
+    height: $ball-size
+    border-radius: $isFullRounded
+    background: white
+    box-shadow: none
+    transition: 1s ease all
+
+.switch.switch--selected
+  background: $switch--selected-bg-color
+  span.ball
+    left: initial

@@ -1,0 +1,44 @@
+@import 'modules/_intro'
+@import 'components/_switch'
+
+$theme-night-color-main: #191e27
+$theme-night-color-secondary: #e7e7e7
+$font-family-handwritten: 'Amita', cursive
+$font-family-sans-serif: 'Leckerli One', cursive
+$font-family-sans-serif-2: 'Alegreya Sans', sans-serif
+$font-family-raleway: 'Raleway', sans-serif
+
+body, html
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-family: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif
+  line-height: 1.5
+  width: 100%
+
+body.theme-dark
+  background-color: $theme-night-color-main
+  color: $theme-night-color-secondary
+
+body
+  background-color: white
+  color: $theme-night-color-main
+
+a.highlight-link
+  -webkit-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
+  text-decoration: none
+  color: inherit
+  -webkit-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
+  font-weight: 400
+  display: inline-block
+  padding: 2px 3px
+  text-decoration: none
+  -webkit-box-shadow: inset 0 -3px 0 #007bff
+  box-shadow: inset 0 -3px 0 #007bff
+  &:hover
+    -webkit-box-shadow: inset 0 -33px 0 0 #007bff
+    box-shadow: inset 0 -33px 0 0 #007bff
+    color: #fff
